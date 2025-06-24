@@ -1,6 +1,5 @@
 
 def longest_word(words: list[str]) -> str:
-  
     # pick the longest or return None
     result = None
     if words:
