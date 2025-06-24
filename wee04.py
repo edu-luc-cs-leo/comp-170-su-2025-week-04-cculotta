@@ -1,4 +1,54 @@
 
+def longest_word(words: list[str]) -> str:
+    # pick the longest or return None
+    result = None
+    if words:
+        result = words[0]
+        for w in words:
+            if len(w) > len(result):
+                result = w
+    return result
+
+def shortest_word(words: list[str]) -> str:
+    # pick the shortest or return None
+    result = None
+    if words:
+        result = words[0]
+        for w in words:
+            if len(w) < len(result):
+                result = w
+    return result
+
+def odd_words(words: list[str]) -> list[str]:
+    # filter for odd-length words
+    result = None
+    if words:
+        result = []
+        for w in words:
+            if len(w) % 2:
+                result.append(w)
+    return result
+
+def average_words(words: list[str]) -> list[str]:
+    # keep words within ±1 of the average length
+    result = None
+    if words:
+        total = sum(len(w) for w in words)
+        avg = total / len(words)
+        result = [w for w in words if abs(len(w) - avg) <= 1]
+    return result
+
+def intersect(foo: list[str], bar: list[str]) -> bool:
+    # True if any word appears in both lists
+    result = False
+    if foo and bar:
+        for w in foo:
+            if w in bar:
+                result = True
+                break
+    return result
+
+
 
 #--------------------------------------------------------------------------------#
 # ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎  WRITE YOUR CODE ABOVE THIS  LINE ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎

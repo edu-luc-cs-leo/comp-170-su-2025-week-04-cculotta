@@ -1,0 +1,1 @@
+I think the main difference from my code and the solutions is I am missing some annotations, which I should probably do more, and i also did different examples for each so there are diffferent results for my different examples
